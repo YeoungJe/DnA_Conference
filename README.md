@@ -16,10 +16,10 @@
 ![음쓰1](https://user-images.githubusercontent.com/48852089/54863255-d15e7e80-4d89-11e9-9f2b-524446c0e034.png)
 
 ## 단계별 적용 과정
-KNN Algorithm : 피아노 음은 무수히 많은 조합의 수가 존재합니다. 따라서 모든 음을 데이터로 사용하는 것은 학습에 장애를 줄 수 있다 판단하였습니다. KNN을 통해 많이 눌리지 않은 특수한 음 조합은 가장 유사하며 대표성을 띄는 음에 할당하여 Label 축소역할을 진행하였습니다.  
-PCA Algorithm : Spectrogram이 음별로 잘 추출되었는지 확인하기 위해 2차원으로 시각화 과정을 거칩니다. 이후 Label마다 Outlier를 제거를 하게됩니다. 이때 모든 경우의 수를 사람이 직접 판단할 수 없어서 다음 과정을 거칩니다.  
-DBSCAN Algorithm : PCA를 통해 2차원으로 시각화 한 후 Outlier를 제거하는 과정을 모든 Label에 자동으로 적용하기 위한 과정입니다. 밀도기반 군집화인 DBSCAN를 이용하여 Main cluster의 core data를 제외한 나머지 data는 Outlier로 판단하여 제거하는 과정입니다.  
-CNN Model : 위의 각 단계를 거친 후 정제된 데이터를 학습시킵니다. Multi-label Classification의 문제였기에 마지막 layer의 활성함수를 softmax 대신 sigmoid로 변경합니다.  
+* KNN Algorithm : 피아노 음은 무수히 많은 조합의 수가 존재합니다. 따라서 모든 음을 데이터로 사용하는 것은 학습에 장애를 줄 수 있다 판단하였습니다. KNN을 통해 많이 눌리지 않은 특수한 음 조합은 가장 유사하며 대표성을 띄는 음에 할당하여 Label 축소역할을 진행하였습니다.  
+* PCA Algorithm : Spectrogram이 음별로 잘 추출되었는지 확인하기 위해 2차원으로 시각화 과정을 거칩니다. 이후 Label마다 Outlier를 제거를 하게됩니다. 이때 모든 경우의 수를 사람이 직접 판단할 수 없어서 다음 과정을 거칩니다.  
+* DBSCAN Algorithm : PCA를 통해 2차원으로 시각화 한 후 Outlier를 제거하는 과정을 모든 Label에 자동으로 적용하기 위한 과정입니다. 밀도기반 군집화인 DBSCAN를 이용하여 Main cluster의 core data를 제외한 나머지 data는 Outlier로 판단하여 제거하는 과정입니다.  
+* CNN Model : 위의 각 단계를 거친 후 정제된 데이터를 학습시킵니다. Multi-label Classification의 문제였기에 마지막 layer의 활성함수를 softmax 대신 sigmoid로 변경합니다.  
  
 
 
