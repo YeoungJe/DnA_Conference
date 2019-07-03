@@ -11,7 +11,9 @@
 프로젝트 간략한 개요는 다음과 같습니다.  
 * Python의 librosa library를 활용하여 음을 Spectrogram으로 변환하여 음이 변하는 지점을 추출 및 저장합니다.  
 * Spectrogram으로 변환된 데이터는 KNN-PCA-DBSCAN의 과정을 거쳐 cleansing과정을 거칩니다.  
-* 정제된 데이터를 바탕으로 CNN을 적용합니다. 
+* 정제된 데이터를 바탕으로 CNN을 적용합니다.  
+  
+![음쓰1](https://user-images.githubusercontent.com/48852089/54863255-d15e7e80-4d89-11e9-9f2b-524446c0e034.png)
 
 ## 
 KNN 알고리즘을 이용하여 가장 비슷한 음으로 할당하여 Label을 축소역할을, PCA를 통해 변환된 Spectrogram을 2차원으로 시각화 후 DBSCAN를 이용하여 Main cluster의 core data를 남기고 나머지 값은 Outlier로 판단하여 제거의 과정을 거칩니다.  
@@ -21,7 +23,6 @@ Multi-label Classification의 문제였기에 마지막 layer의 활성함수를
 음악을 쓰다 프로젝트를 통해 비정형 데이터 중 음성 데이터를 처리하는 방법을 터득했고 이상치를 제거하는 방법론에 대해 심도있는 고민을 진행하였습니다. 코드와 간략한 진행 과정은 아래 Github 링크를 첨부하였습니다!
  
 
-![음쓰1](https://user-images.githubusercontent.com/48852089/54863255-d15e7e80-4d89-11e9-9f2b-524446c0e034.png)
 
 1. MIDI파일에서 CNN 학습을 위한 스펙트로그램을 추출 및 저장
 
